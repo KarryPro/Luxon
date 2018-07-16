@@ -1,0 +1,30 @@
+@media (min-width: 1200px) { 
+	/*==== layout ====*/
+	.layout {
+		height: 1270px;
+	}
+
+	.layout_2 {
+		left: 380px;
+	}
+
+	.layout_3 {
+		left: 760px;
+	}
+
+	.layout_5 {
+		left: 380px;
+	}
+
+	.layout_6 {
+		left: 760px;
+	}
+
+	.layout_8 {
+		left: 380px;
+	}
+
+	.layout_9 {
+		left: 760px;
+	}
+}
