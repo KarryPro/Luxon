@@ -72,7 +72,8 @@ a:hover {
 .catalog .catalogLink,
 .about-us .about-usLink,
 .news .newsLink,
-.contacts .contactsLink {
+.contacts .contactsLink,
+.lamp .lampLink {
 	border-bottom: 1px solid rgb(51,51,51);
 	color: rgb(51,51,51);
 }
