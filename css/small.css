@@ -1,0 +1,30 @@
+@media (min-width: 576px) {
+
+/*====  CATALOG ====*/
+.catalog-file  {
+	flex-direction: row;
+	height: 50px;
+	margin-top: 10px;
+}
+
+.catalog-file a {
+	padding: 8px 15px;
+}
+
+.catalog-slogan {
+	height: 50px;
+	justify-content: flex-end;
+}
+
+/*FILTER-RESULT*/
+.filter-column {
+	max-width: 430px;
+    margin-left: 0;
+    margin-right: 0; 
+}
+
+.carousel-item {
+	height: 380px;
+}
+
+}
