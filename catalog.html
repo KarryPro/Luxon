@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>Каталог</title>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css integrity=sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm crossorigin=anonymous>
+<link rel=stylesheet href=css/style.css>
+<link rel="shortcut icon" href=favicon.png type=image/png>
+<link rel=icon href=favicon.png type=image/png>
+</head>
+<body class=catalog id=catalog>
+<header class=header role=banner>
+<nav class="navbar navbar-default" role=navigation>
+<div class=container>
+<div class=navbar-header>
+<a href=index.html class=navbar-brand>
+<span class=logo></span>
+</a>
+<div class=info-container>
+<span>+7 123 474 21 81</span>
+<span class=time>с 9 до 21</span>
+<span>info@luxon.ru</span>
+</div>
+<button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar-menu-collapse>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+</div>
+<div class="navbar-collapse collapse" id=navbar-menu-collapse>
+<div class=menu-container>
+<ul class=menu>
+<li class=menu-item>
+<a class=catalogLink>каталог</a>
+</li>
+<li class=menu-item>
+<a href=about-us.html>о нас</a>
+</li>
+<li class=menu-item>
+<a href=blog.html>блог</a>
+</li>
+<li class=menu-item>
+<a href=contacts.html>контакты</a>
+</li>
+</ul>
+<form action method=get class=form-search>
+<button type=submit>
+<span class=icon-glass></span>
+</button>
+<input id=typed name=s type=search placeholder>
+</form>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main class=catalog>
+<div class=container>
+<div class=row>
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+<ul class=breadcrumbs id=breadcrumbs>
+<li><a href=index.html>Главная</a></li>
+<li><a id=breadcrumbs-current>Каталог</a></li>
+</ul>
+</div>
+<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+<div class=catalog-file>
+<h1>Каталог товаров</h1>
+<a href=# class=btn-focus>скачать PDF</a>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+<div class=catalog-slogan>
+<span>сделаем мир светлее!</span>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=row>
+<div class="filter-menu col-12">
+<div class="dropdown dropdown-button">
+<button class="btn dropdown-toggle" type=button id=dropdownMenuButton data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Тип светильника
+</button>
+<ul class="dropdown-menu dropdown-menu-form" role=menu>
+<li>
+<label class=checkbox-container for=lamp-outer>Уличный
+<input type=checkbox id=lamp-outer name=lamp value=lamp-outer>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=lamp-office>Офисный
+<input type=checkbox id=lamp-office name=lamp value=lamp-office>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=lamp>Лампа
+<input type=checkbox id=lamp name=lamp value=lamp>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=projector>Прожектор
+<input type=checkbox id=projector name=lamp value=projector>
+<span class=checkmark></span>
+</label>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-button">
+<button class="btn dropdown-toggle" type=button id=dropdownMenuButton data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Мощность
+</button>
+<ul class="dropdown-menu dropdown-menu-form" role=menu>
+<li>
+<label class=checkbox-container for=0-500-watt>0-500 Вт
+<input type=checkbox id=0-500-watt name=сapacity value=0-500-watt>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=500-1000-watt>500-1000 Вт
+<input type=checkbox id=500-1000-watt name=сapacity value=500-1000-watt>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=1000-1500-watt>1000-1500 Вт
+<input type=checkbox id=1000-1500-watt name=сapacity value=1000-1500-watt>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=1500-2000-watt>1500-2000 Вт
+<input type=checkbox id=1500-2000-watt name=сapacity value=1500-2000-watt>
+<span class=checkmark></span>
+</label>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-button">
+<button class="btn dropdown-toggle" type=button id=dropdownMenuButton data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Цветовая температура
+</button>
+<ul class="dropdown-menu dropdown-menu-form" role=menu>
+<li>
+<label class=checkbox-container for=2700K>2700K
+<input type=checkbox id=2700K name=temperature value=2700K>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=3000-6500K>3000-6500K
+<input type=checkbox id=3000-6500K name=temperature value=3000-6500K>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=4000K>4000K
+<input type=checkbox id=4000K name=temperature value=4000K>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=5000K>5000K
+<input type=checkbox id=5000K name=temperature value=5000K>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=5000K-red>5000K + красная подсветка
+<input type=checkbox id=5000K-red name=temperature value=5000K-red>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=5000K-blue>5000K + голубая подсветка
+<input type=checkbox id=5000K-blue name=temperature value=5000K-blue>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=6400K>6400K
+<input type=checkbox id=6400K name=temperature value=6400K>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=6500K>6500K
+<input type=checkbox id=6500K name=temperature value=6500K>
+<span class=checkmark></span>
+</label>
+</li>
+<div class=items-found>
+<p>Найдено: <span>61</span> товар</p>
+</div>
+<div class=input-button>
+<a type=submit>Применить</a>
+</div>
+</ul>
+</div>
+<div class="dropdown dropdown-button">
+<button class="btn dropdown-toggle" type=button id=dropdownMenuButton data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Цвет
+</button>
+<ul class="dropdown-menu dropdown-menu-form" role=menu>
+<li>
+<label class=checkbox-container for=color-white>Белый
+<input type=checkbox id=color-white name=color value=color-white>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=color-brown>Коричневый
+<input type=checkbox id=color-brown name=color value=color-brown>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=color-silver>Серебро
+<input type=checkbox id=color-silver name=color value=color-silver>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=color-black>Черный
+<input type=checkbox id=color-black name=color value=color-black>
+<span class=checkmark></span>
+</label>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-button">
+<button class="btn dropdown-toggle" type=button id=dropdownMenuButton data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Материал корпуса
+</button>
+<ul class="dropdown-menu dropdown-menu-form" role=menu>
+<li>
+<label class=checkbox-container for=material-metal>Металл
+<input type=checkbox id=material-metal name=material value=material-metal>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=material-plastic>Пластик
+<input type=checkbox id=material-plastic name=material value=material-plastic>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=material-glass>Стекло
+<input type=checkbox id=material-glass name=material value=material-glass>
+<span class=checkmark></span>
+</label>
+</li>
+<li>
+<label class=checkbox-container for=material-aluminum>Алюминий
+<input type=checkbox id=material-aluminum name=material value=material-aluminum>
+<span class=checkmark></span>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class="row filter-result">
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/1.jpg alt>
+</a>
+<span class=img-capture><a href=lamp.html>Superled</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/2.jpg alt>
+</a>
+<span class=img-capture><a href>Prime LED 33-56</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/3.jpg alt>
+</a>
+<span class=img-capture><a href>HIT 3290</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/4.jpg alt>
+</a>
+<span class=img-capture><a href>MACH 1 400W</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/5.jpg alt>
+</a>
+<span class=img-capture><a href>ROUND LED</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/6.jpg alt>
+</a>
+<span class=img-capture><a href>BLAZ 70/W</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/7.jpg alt>
+</a>
+<span class=img-capture><a href>BASIS RD-4001</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/8.jpg alt>
+</a>
+<span class=img-capture><a href>KARDAN MH1+Н1</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/9.jpg alt>
+</a>
+<span class=img-capture><a href>SFERA 2х42W</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/10.jpg alt>
+</a>
+<span class=img-capture><a href>BASIS RD-4001</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/11.jpg alt>
+</a>
+<span class=img-capture><a href>KARDAN MH1+Н1</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-4 filter-column">
+<div class=filter-item>
+<a href=lamp.html class=img-block>
+<img src=assets/img/catalog/12.jpg alt>
+</a>
+<span class=img-capture><a href>SFERA 2х42W</a></span>
+<div class=filter-item__description>
+<a href class=btn-focus>сделать заявку</a>
+<h3>Интерьерный точечный светильник</h3>
+<div class=parameters>
+<div class=parameters-watt>
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=20><path data-name=watt d="M13.5 7.5l-8 12v-7h-5l8-12v7h5z" fill=none stroke="#c4c4c4"/></svg>
+<span>
+20 Вт
+</span>
+</div>
+<div class=parameters-lm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M11 8V7h4v1h-4zM9.621 4.671l3.536-3.535.707.707-3.536 3.536zM7.5 10A2.5 2.5 0 1 1 10 7.5 2.5 2.5 0 0 1 7.5 10zM7 0h1v4H7V0zM1.136 1.843l.707-.707 3.536 3.535-.707.708zM4 8H0V7h4v1zm1.379 2.328l-3.536 3.536-.707-.707 3.536-3.536zM8 15H7v-4h1v4zm5.864-1.843l-.707.707-3.536-3.536.707-.707z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+2500 Лм
+</span>
+</div>
+<div class=parameters-mm>
+<svg xmlns=http://www.w3.org/2000/svg width=15 height=15><path d="M14 8V1.707L9.328 6.379l-.707-.708L13.293 1H7V0h8v8h-1zm-6 6v1H0V7h1v6.293l4.672-4.672.707.707L1.707 14H8z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<span>
+100*145мм
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=row>
+<div class="to-top col-12 col-sm-12 col-md-12 col-lg-12">
+<svg xmlns=http://www.w3.org/2000/svg width=27 height=15><path id=arrow data-name=arrow d="M26.312 14.99L13.5 1.44.689 14.99l-.676-.72L12.826.73l.675-.72 13.486 14.26z" fill=#c4c4c4 fill-rule="evenodd"/></svg>
+<a href=#catalog>наверх</a>
+</div>
+</div>
+</div>
+</main>
+<footer class=footer>
+<div class=container>
+<div class=row>
+<div class="col-sm-12 col-md-12">
+<div class=social>
+<p>Хотите узнать о нас больше?</p>
+<div class=icons>
+<a href class=btn-icon role=button>
+<span class="icon-glass dark-grey"></span>
+</a>
+<a href class=btn-icon role=button>
+<span class="icon-call dark-grey"></span>
+</a>
+<a href class=btn-icon role=button>
+<span class="icon-email dark-grey"></span>
+</a>
+</div>
+</div>
+</div>
+<div class=line>
+</div>
+<div class="col-sm-12 col-md-12">
+<div class=copyright>
+<span>&copy; 2018 <a href=index.html>Luxon</a></span>
+<span>тел.: <a href=#>+7 123 474 21 81</a></span>
+<span>
+<a href=#>info@luxon.ru</a>
+</span>
+<span>найти нас на <a href=https://www.google.ru/maps target=_blank>google maps</a></span>
+<span>Дизайн сайта <a href=#>SHARLOVYCH</a></span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js integrity=sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q crossorigin=anonymous></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js integrity=sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js></script>
+<script src=js/custom.js></script>
+</body>
+</html>
